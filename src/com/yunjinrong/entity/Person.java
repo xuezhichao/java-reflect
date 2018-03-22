@@ -6,6 +6,8 @@ public class Person {
 	
 	private int age;
 	
+	private void privateMethod() {}
+	
 	public Person() {
 		System.out.println("无参构造器");
 	}
@@ -26,6 +28,11 @@ public class Person {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public void setName(String name,int age) {
+		System.out.println("name="+name);
+		System.out.println("age="+age);
 	}
 
 	public void setAge(int age) {
