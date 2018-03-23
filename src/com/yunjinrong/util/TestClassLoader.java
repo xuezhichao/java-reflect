@@ -54,7 +54,7 @@ public class TestClassLoader {
 		System.out.println(user);
 		
 		String password = properties.getProperty("password");
-		
+		System.out.println(password);
 	}
 	
 	

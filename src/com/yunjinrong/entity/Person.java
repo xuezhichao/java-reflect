@@ -4,7 +4,7 @@ public class Person {
 	
 	private String name;
 	
-	private int age;
+	private Integer age;
 	
 	private void privateMethod() {}
 	
@@ -12,30 +12,9 @@ public class Person {
 		System.out.println("无参构造器");
 	}
 	
-	public Person(String name,int age) {
+	public Person(String name,Integer age) {
 		System.out.println("有参构造器");
 		this.name=name;
-		this.age = age;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public void setName(String name,int age) {
-		System.out.println("name="+name);
-		System.out.println("age="+age);
-	}
-
-	public void setAge(int age) {
 		this.age = age;
 	}
 
@@ -44,4 +23,22 @@ public class Person {
 		return "Person [name=" + name + ", age=" + age + "]";
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@AgeValidator(max = 100, min = 0)
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	
 }
